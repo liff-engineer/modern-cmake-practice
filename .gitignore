@@ -1,5 +1,4 @@
 \build
+\.vscode
 \__pycache__
-\external\downloads
-\external\deps
 *.ts
