@@ -4,6 +4,10 @@ project(cmakeuser
     LANGUAGES CXX 
 )
 
+#配置cmake脚本模块路径
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+include(deploy_dependencies)
+
 #生成Visual Studio工程时使用文件夹组织结构
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 

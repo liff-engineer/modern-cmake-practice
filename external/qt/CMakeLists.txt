@@ -3,7 +3,7 @@ include(CMakePrintHelpers)
 
 #如果在环境变量中找不到QTDIR则下载
 if(NOT DEFINED ENV{QTDIR})
-    message(STATUS "PATH = $ENV{PATH}")    
+    #message(STATUS "PATH = $ENV{PATH}")    
     FetchContent_Declare(
         qt 
         URL "ftp://yourhost/qt5.12.9.zip"
@@ -39,3 +39,5 @@ include(deploy_qt_runtime.cmake)
 #否则可能无法正常使用
 find_package(Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt5LinguistTools)
+
+set(QT5_BINARIES_SEARCH_PATH "$<TARGET_FILE_DIR:Qt5::Core>" CACHE STRING "Qt5动态库搜索路径")

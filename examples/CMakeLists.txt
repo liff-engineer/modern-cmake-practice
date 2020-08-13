@@ -8,6 +8,10 @@ target_sources(QHelloWorld
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 target_link_libraries(QHelloWorld
     PRIVATE Qt5::Widgets
+    PRIVATE spdlog::spdlog
 )
 
-deploy_qt_runtime(TARGET QHelloWorld)
+#deploy_qt_runtime(TARGET QHelloWorld)
+deploy_dependencies(TARGET QHelloWorld
+    SEARCH_PATHS ${QT5_BINARIES_SEARCH_PATH}
+)
