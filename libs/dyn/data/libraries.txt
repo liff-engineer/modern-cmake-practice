@@ -1,0 +1,5 @@
+catch2
+fmt
+pybind11
+qt
+spdlog

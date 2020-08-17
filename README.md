@@ -18,6 +18,10 @@
 | external | 第三方库,采用cmake的FetchContent模块处理第三方库下载及配置 |
 | examples | 示例程序                                                   |
 
+### 模板
+
+
+
 ### 第三方库
 
 #### 提供CMake配置的二进制包(以Qt为例)
@@ -78,6 +82,12 @@ target_link_libraries(QHelloWorld
     PRIVATE Qt5::Widgets
 )
 ```
+
+#### 使用CMake构建的开源库
+
+
+
+### SDK构建
 
 
 
